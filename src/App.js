@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1 ><a href="/src/HomePage.js" className="header-text"> Choose your wine</a></h1>
+        <h1 ><a href="./HomePage.js" className="header-text"> Choose your wine</a></h1>
         <div className="search-bar-container">
           <SearchBar setResults={setResults} />
           {results && results.length > 0 && (
