@@ -1,13 +1,14 @@
-const Wines = ({wine, location, image}) =>
+const Wines = ({wine, location, rating, image}) =>
 {
     return (
-        <section className="wines-container">
-            <h4>{wine}</h4>
+        <div className="wines-container">
             <div className="infowine">
+                <img src={image} alt="images" height="300px" width=""></img>
+                <h4>{wine}</h4>
                 <div>{location}</div>
-                <div>{image}</div>
+                <div>{rating}</div>
             </div>
-        </section>
+        </div>
     )
 }
 
