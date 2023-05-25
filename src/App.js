@@ -1,59 +1,71 @@
-import "./App.css"
+import { useState } from "react";
+import "./App.css";
 import Reds from "./Reds";
 import Whites from "./Whites";
 import Sparkling from "./Sparkling";
 import Rose from "./Rose";
 import Dessert from "./Dessert";
 import Port from "./Port";
+import SearchBar from "./components/SearchBar";
+import SearchResultList from "./components/SearchResultList";
+import HomePage from "./HomePage";
 import { NavLink, Route, Routes } from "react-router-dom";
 
 const activeLink = "active-link";
 
 function App() {
+  const [results, setResults] = useState([]);
   return (
     <div className="App">
-      <h1>Choose your wine</h1>
-      <div>
-        <p>Click on any category below and search your favorite wine </p>
+      <div className="header">
+        <h1 ><a href="/src/HomePage.js" className="header-text"> Choose your wine</a></h1>
+        <div className="search-bar-container">
+          <SearchBar setResults={setResults} />
+          {results && results.length > 0 && (
+            <SearchResultList results={results} />
+          )}
+        </div>
       </div>
-      <nav>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/reds"
-        >
-          Reds
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/whites"
-        >
-          Whites
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/sparkling"
-        >
-          Sparkling
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/rose"
-        >
-          Rose
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/dessert"
-        >
-          Dessert
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? activeLink : undefined)}
-          to="/port"
-        >
-          Port
-        </NavLink>
-      </nav>
+      <div className="">
+        <nav className="nav">
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/reds"
+          >
+            <button className="btn">Reds</button>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/whites"
+          >
+            <button className="btn">Whites</button>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/sparkling"
+          >
+            <button className="btn">Sparkling</button>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/rose"
+          >
+            <button className="btn">Rose</button>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/dessert"
+          >
+            <button className="btn">Dessert</button>
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => (isActive ? activeLink : undefined)}
+            to="/port"
+          >
+            <button className="btn">Port</button>
+          </NavLink>
+        </nav>
+      </div>
       <Routes>
         <Route path="/reds" element={<Reds />} />
         <Route path="/whites" element={<Whites />} />
@@ -62,6 +74,7 @@ function App() {
         <Route path="/dessert" element={<Dessert />} />
         <Route path="/port" element={<Port />} />
       </Routes>
+      <HomePage />
     </div>
   );
 }
