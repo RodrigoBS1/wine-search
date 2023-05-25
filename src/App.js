@@ -20,10 +20,7 @@ function App() {
       <div className="header">
         <h1 className="text-header">
           <a id="header-text"
-            href="/home"
-            className={({ isActive }) => (isActive ? activeLink : undefined)}
-            to="/home"
-          >
+            href="https://wine-search.onrender.com/">
             Choose your wine
           </a>
         </h1>
