@@ -14,6 +14,10 @@ At this moment of the project, the user will navigate through the categories and
 
 See the app [deployed](https://wine-search.onrender.com/).
 
+### `Wireframe`
+
+Here's the [wireframe](https://drive.google.com/file/d/1bjv_3LavSbrINlq1ShC0yDZyEp1FW9rx/view?usp=sharing).
+
 ## `APP improvements`
 
 **In the near future**
