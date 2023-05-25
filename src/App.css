@@ -1,9 +1,17 @@
 .App {
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+.active-link {
+  font-weight: bold;
+  color:white;
+  text-decoration: none;
 }
 
 .header {
+  text-decoration: none;
   margin: 1rem;
   padding: 1rem;
   border-radius: 2rem;
@@ -11,6 +19,12 @@
   text-shadow: 3px 3px #180404;
   font-size: 30px;
   background-image: url("/src/cork_background.jpeg");
+  
+}
+
+.text-header {
+  text-decoration: none;
+  color: white;
 }
 
 .header-text {
@@ -29,6 +43,7 @@
   color:white;
   background-color: rgb(116, 22, 22);
   border-radius: 1rem;
+  text-decoration: none;
 }
 
 .search {
@@ -36,7 +51,9 @@
   height: 25px;
   border-radius: 2rem;
   text-align: center;
+  text-decoration: none;
 }
+
 
 .nav {
   display: flex;
@@ -45,7 +62,12 @@
   padding: 20px;
   background-color: rgb(236, 182, 182);
   border-radius: 2rem;
+  text-decoration: none;
+}
 
+.nav2 {
+  text-decoration: none;
+  color: white;
 }
 
 .wine-container {
@@ -59,6 +81,7 @@
   margin: 1rem;
   padding: 1rem;
   overflow: scroll;
+  text-decoration: none;
 }
 
 .infowine {
@@ -68,6 +91,7 @@
   width: 450px;
   height: 450px;
   padding-top: 2rem;
+  text-decoration: none;
 }
 
 .wine-type {
@@ -77,6 +101,7 @@
   padding: 3px;
   border-radius: 2rem;
   font-size: larger;
+  text-decoration: none;
 }
 
 .index-page {
@@ -88,4 +113,5 @@
   height: 420px;
   border-radius: 2rem;
   background-image: url("/src/wine-background.jpg");
+  text-decoration: none;
 }

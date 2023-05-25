@@ -18,15 +18,24 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <h1 ><a href="./HomePage.js" className="header-text"> Choose your wine</a></h1>
-        <div className="search-bar-container">
-          <SearchBar setResults={setResults} />
-          {results && results.length > 0 && (
-            <SearchResultList results={results} />
-          )}
-        </div>
+        <NavLink
+          className={({ isActive }) => (isActive ? activeLink : undefined)}
+          to="/home"
+        >
+          <h1 className="text-header">
+            <a href="src/HomePage.js" className="header-text">
+              Choose your wine
+            </a>
+          </h1>
+          <div className="search-bar-container">
+            <SearchBar setResults={setResults} />
+            {results && results.length > 0 && (
+              <SearchResultList results={results} />
+            )}
+          </div>
+        </NavLink>
       </div>
-      <div className="">
+      <div className="nav2">
         <nav className="nav">
           <NavLink
             className={({ isActive }) => (isActive ? activeLink : undefined)}
@@ -73,8 +82,8 @@ function App() {
         <Route path="/rose" element={<Rose />} />
         <Route path="/dessert" element={<Dessert />} />
         <Route path="/port" element={<Port />} />
+        <Route path="/home" element={<HomePage />} />
       </Routes>
-      <HomePage />
     </div>
   );
 }
