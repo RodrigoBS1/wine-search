@@ -20,7 +20,7 @@ function App() {
       <div className="header">
         <h1 className="text-header">
           <a id="header-text"
-            href="src/HomePage.js"
+            href="/home"
             className={({ isActive }) => (isActive ? activeLink : undefined)}
             to="/home"
           >
