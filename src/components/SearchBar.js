@@ -29,7 +29,7 @@ const SearchBar = ({setResults}) => {
       <input
         className="search"
         type="text"
-        placeholder="Write the region you'd like!"
+        placeholder="We're working it. Coming soon!"
         value={input}
         onChange={(e) => handleChange(e.target.value)}
         />
