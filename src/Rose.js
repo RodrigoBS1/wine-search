@@ -17,7 +17,12 @@ const Rose = () => {
       </div>
       <section className="wine-container">
         {roses.map((rose) => (
-          <Wines wine={rose.wine} location={rose.location} image={rose.image} />
+          <Wines 
+          wine={rose.wine} 
+          location={rose.location} 
+          image={rose.image} 
+          rating={rose.rating}
+          />
         ))}
       </section>
     </section>

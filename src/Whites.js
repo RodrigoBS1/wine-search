@@ -21,6 +21,7 @@ const Whites = () => {
             wine={white.wine}
             location={white.location}
             image={white.image}
+            rating={white.rating}
           />
         ))}
       </section>

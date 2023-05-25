@@ -4,9 +4,10 @@ const Wines = ({wine, location, rating, image}) =>
         <div className="wines-container">
             <div className="infowine">
                 <img src={image} alt="images" height="300px" width=""></img>
-                <h4>{wine}</h4>
+                <h3>{wine}</h3>
                 <div>{location}</div>
-                <div>{rating}</div>
+                <div><strong>Average: </strong><i>{rating.average}</i></div>
+                <div><strong>Reviews: </strong><i>{rating.reviews}</i></div>
             </div>
         </div>
     )

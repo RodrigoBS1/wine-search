@@ -21,6 +21,7 @@ const Sparkling = () => {
             wine={sparkling.wine}
             location={sparkling.location}
             image={sparkling.image}
+            rating={sparkling.rating}
           />
         ))}
       </section>

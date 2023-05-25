@@ -17,7 +17,12 @@ const Ports = () => {
       </div>
       <section className="wine-container">
         {ports.map((port) => (
-          <Wines wine={port.wine} location={port.location} image={port.image} />
+          <Wines 
+          wine={port.wine} 
+          location={port.location} 
+          image={port.image} 
+          rating={port.rating}
+          />
         ))}
       </section>
     </section>
