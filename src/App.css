@@ -4,10 +4,10 @@
   text-decoration: none;
 }
 
-.active-link {
+.isActive{
   font-weight: bold;
   color:white;
-  text-decoration: none;
+  text-decoration: none
 }
 
 .header {
@@ -22,12 +22,7 @@
   
 }
 
-.text-header {
-  text-decoration: none;
-  color: white;
-}
-
-.header-text {
+#header-text {
   text-decoration: none;
   color: white;
   text-shadow: 3px 3px #180404;
@@ -80,7 +75,6 @@
   background-color: rgb(236, 194, 194);
   margin: 1rem;
   padding: 1rem;
-  overflow: scroll;
   text-decoration: none;
 }
 
