@@ -4,7 +4,7 @@ const SearchBar = ({setResults}) => {
   const [input, setInput] = useState();
 
   const fetchData = (value) => {
-    fetch("https://api.sampleapis.com/wines/reds/")
+    fetch(`https://api.sampleapis.com/wines/${input}`)
       .then((response) => response.json())
       .then((data) => {
         const results = data.filter((location) => {
